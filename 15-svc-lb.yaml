@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-np
+ name: nginx-lb
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
    # labels are used as selectors
     project: roboshop
     component: frontend
-    environment: dev
+    environment: dev   
   ports:
   - protocol: TCP
     port: 80 # servie port
     targetPort: 80 # container port
-    nodePort: 30174
+    nodePort: 32141
