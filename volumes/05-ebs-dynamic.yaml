@@ -19,7 +19,7 @@ spec:
   - name: app
     image: nginx
     volumeMounts:
-    - name: ebs-sc
+    - name: ebs-claim
       mountPath: /usr/share/nginx/html
   volumes:
   - name: persistent-storage
